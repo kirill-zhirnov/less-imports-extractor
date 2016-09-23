@@ -1,0 +1,20 @@
+@import "./less/setup";
+
+body {
+	backgound: #fff;
+}@IMpORT'bootstrap';
+
+//  @import "ignore.less";
+div {
+	some: rule; //aaa
+}
+
+/*
+ @import "ignore.less";
+ @import "ignore.less";
+*/
+
+@import (optional) "optional.less";
+@import (reference, optional, reference) "otherOptional.less";
+@import 'second.less' ;
+//end comment

@@ -1,0 +1,32 @@
+{
+  "name": "less-imports-extractor",
+  "version": "0.0.1",
+  "description": "Extract less @imports recursively.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kirill-zhirnov/less-imports-extractor.git"
+  },
+  "author": "Kirill Zhirnov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kirill-zhirnov/less-imports-extractor/issues"
+  },
+  "homepage": "https://github.com/kirill-zhirnov/less-imports-extractor#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-coffee": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "load-grunt-tasks": "^3.5.2"
+  },
+  "dependencies": {
+    "exists-file": "^2.1.0",
+    "q": "^1.4.1",
+    "strip-css-comments": "^3.0.0",
+    "underscore": "^1.8.3"
+  }
+}
