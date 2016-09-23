@@ -1,6 +1,6 @@
 {
   "name": "less-imports-extractor",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Extract less @imports recursively.",
   "main": "index.js",
   "scripts": {

@@ -108,16 +108,21 @@ class LessImportsExtractor
 		if !ext
 			importFile += ".less"
 
-		Q()
-		.then () =>
-			if /^\./.test(importFile)
-				return path.resolve currentDir, importFile
-			else
+		absolutePath = path.resolve(currentDir, importFile)
+		Q.nfcall existsFile, absolutePath
+		.then (result) =>
+			if result
+				return Q.reject('pathFound')
+
+			if !/^\./.test(importFile)
 				return @findFileInIncludePaths importFile
-		.then (absolutePath) ->
-			deferred.resolve absolutePath
+		.then (result) =>
+			deferred.resolve result
 		.catch (e) ->
-			deferred.reject e
+			if e == 'pathFound'
+				deferred.resolve absolutePath
+			else
+				deferred.reject e
 		.done()
 
 		return deferred.promise
